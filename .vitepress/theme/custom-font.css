@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'JetBrains Mono Bold';
+    src: url('../../assets/JetBrainsMono-Bold.ttf') format('truetype');
+}
+
+:root {
+    --vp-sidebar-width: 300px;
+    --vp-font-family-base: "customFont";
+    font-family: 'JetBrains Mono Bold', Consolas, serif;
+}
+
+code {
+    font-family: 'JetBrains Mono Bold', Consolas, serif;
+}
