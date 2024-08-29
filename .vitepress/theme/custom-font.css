@@ -3,7 +3,7 @@
     src: url('../../assets/JetBrainsMono-Bold.ttf') format('truetype');
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1200px) {
     html {
         background: #f4f4f4;
         padding: 0 400px;
