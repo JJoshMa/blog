@@ -1,21 +1,41 @@
 <script setup lang="ts">
-import { useData } from 'vitepress'
+import {Content, useData} from 'vitepress'
 
-const { site, frontmatter } = useData()
+const data = useData()
+const {site, frontmatter} = data
+console.log(data.localeIndex.value)
 </script>
 
 <template>
-  <img src="../../assets/DragonMedium.png"  style="position: fixed;top: 0;left: 42px;  width: 60px;height: 60px" alt="404"/>
-  <div v-if="frontmatter.home">
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
-    <ul>
-      <li><a href="/markdown-examples">Markdown Examples</a></li>
-      <li><a href="/api-examples">API Examples</a></li>
-    </ul>
-  </div>
-  <div v-else>
+  <img src="../../assets/DragonMedium.png" class="dragon-image" alt="404"/>
+  <div >
     <a href="/">Home</a>
-    <Content />
+    <h1>{{ site.title }}</h1>
+    <a href="/compiler/编译原理">测试</a>
+    <a href="/api-examples">引用 </a>
+    
+    <div>{{frontmatter}}</div>
+    <div>{{data}}</div>
+    
+    <div style="padding-left: 24px;max-width: 90%" >
+      <Content/>
+    </div>
   </div>
 </template>
+
+<style scoped>
+
+.dragon-image {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+}
+
+a:visited {
+  color: #0000FF; 
+}
+
+</style>

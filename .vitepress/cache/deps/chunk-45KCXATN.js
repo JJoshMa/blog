@@ -3609,7 +3609,7 @@ function applyOptions(instance) {
     renderTriggered,
     errorCaptured,
     serverPrefetch,
-    // assets API
+    // public API
     expose,
     inheritAttrs,
     // assets

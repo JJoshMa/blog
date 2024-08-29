@@ -3,12 +3,77 @@
     src: url('../../assets/JetBrainsMono-Bold.ttf') format('truetype');
 }
 
+@media (min-width: 600px) {
+    html {
+        background: #f4f4f4;
+        padding: 0 400px;
+    }
+}
+
+@media (max-width: 599px) {
+    html {
+        background: #f4f4f4;
+    }
+}
+
+h1 {
+    font-size: 26px;
+}
+
 :root {
-    --vp-sidebar-width: 300px;
     --vp-font-family-base: "customFont";
-    font-family: 'JetBrains Mono Bold', Consolas, serif;
 }
 
 code {
+    border-radius: 3px;
+    padding: 0.2em 0.4em;
     font-family: 'JetBrains Mono Bold', Consolas, serif;
+}
+
+pre {
+    background-color: #e3e3e3;
+    border-radius: 6px;
+    padding: 16px;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+pre code {
+    color: #abb2bf;
+}
+
+.lang {
+    display: none;
+}
+
+.copy {
+    position: absolute;
+    right: 0;
+    width: 36px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    border: none;
+    background-color: #acaaaa;
+}
+
+.copy::after {
+    content: 'Copy';
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.copied {
+    width: 36px;
+    height: 16px;
+    background-color: #acaaaa;
+    transition: all 350ms ease-in-out;
+}
+
+.copied::after {
+    content: '✔';
+    font-size: 12px;
+    color: #ffffff;
 }
